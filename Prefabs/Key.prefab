@@ -31,6 +31,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3920810274584737661}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -74,7 +75,7 @@ MonoBehaviour:
     m_MaxSize: 50
     m_Alignment: 4
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
@@ -91,7 +92,6 @@ GameObject:
   - component: {fileID: 6209074306428421647}
   - component: {fileID: 4042361842864519692}
   - component: {fileID: 5741140072232356926}
-  - component: {fileID: 2419973160730312416}
   m_Layer: 5
   m_Name: Key
   m_TagString: Untagged
@@ -113,6 +113,7 @@ RectTransform:
   m_Children:
   - {fileID: 889119759272267489}
   m_Father: {fileID: 0}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -140,7 +141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.34901962, g: 0.34901962, b: 0.34901962, a: 1}
+  m_Color: {r: 0, g: 0.38679248, b: 0.3676719, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -170,7 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -201,7 +202,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2419973160730312416}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: KeyScript, Assembly-CSharp
         m_MethodName: AddChar
         m_Mode: 1
@@ -213,16 +214,3 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &2419973160730312416
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1055844717785591869}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 774750071e0b6844ca0752c60ef23883, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mycharcter: {fileID: 0}

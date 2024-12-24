@@ -2,19 +2,13 @@
 using UnityEngine.UI;
 public class KeyScript : MonoBehaviour {
 
-    string mycharcter;
-    private void Start()
-    {
-        if(transform.GetChild(0).GetComponent<Text>())
-            mycharcter = transform.GetChild(0).GetComponent<Text>().text;
-    }
     public void AddSpace()
     {
         KeysManager.keysManager.AppendChar(" ");
     }
-    public void AddChar()
+    public void AddChar(string character)
     {
-        KeysManager.keysManager.AppendChar(mycharcter);
+        KeysManager.keysManager.AppendChar(character);
     }
     public void sendEnter()
     {

@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System.Collections;
+using System.Reflection;
 using UnityEngine;
 using UnityEngine.UI;
 public class KeysManager : MonoBehaviour {
@@ -8,9 +9,10 @@ public class KeysManager : MonoBehaviour {
     public bool isLeft = true;
 
     int min,max;
-    private void Awake()
+    private void Start()
     {
         keysManager = this;
+        // transform.parent.gameObject.SetActive(false);
     }
     #endregion
 
@@ -38,7 +40,9 @@ public class KeysManager : MonoBehaviour {
             textToAddTo.caretPosition = isLeft?lastCaretPosition:textToAddTo.text.Length - lastCaretPosition;
             selectionPosition = lastCaretPosition;
             
+            
         }
+
     }
 
     public void DeleteChar()
@@ -73,6 +77,7 @@ public class KeysManager : MonoBehaviour {
 
             textToAddTo.GetType().GetField("m_AllowInput", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(textToAddTo, true);
             textToAddTo.GetType().InvokeMember("SetCaretVisible", BindingFlags.NonPublic | BindingFlags.InvokeMethod | BindingFlags.Instance, null, textToAddTo, null);
+
             textToAddTo.caretPosition = isLeft?lastCaretPosition:textToAddTo.text.Length - lastCaretPosition;
         }
     }
